@@ -26,8 +26,8 @@ print_r(glob('e:\OSPanel\domains\own-php-manual\php-output\*'));
 /* Output:
 Array
 (
-    [0] => e:\OSPanel\domains\own-php-manual\php-output\1-path.php
-    [1] => e:\OSPanel\domains\own-php-manual\php-output\2-file-system.php
+    [0] => e:\OSPanel\domains\own-php-manual\output\1-path.php
+    [1] => e:\OSPanel\domains\own-php-manual\output\2-file-system.php
 )
 */
 
@@ -50,12 +50,12 @@ foreach($iterator as $item){
 /* Output:
 SplFileInfo Object
 (
-    [pathName:SplFileInfo:private] => e:\OSPanel\domains\own-php-manual\php-output\1-path.php
+    [pathName:SplFileInfo:private] => e:\OSPanel\domains\own-php-manual\output\1-path.php
     [fileName:SplFileInfo:private] => 1-path.php
 )
 SplFileInfo Object
 (
-    [pathName:SplFileInfo:private] => e:\OSPanel\domains\own-php-manual\php-output\2-file-system.php
+    [pathName:SplFileInfo:private] => e:\OSPanel\domains\own-php-manual\output\2-file-system.php
     [fileName:SplFileInfo:private] => 2-file-system.php
 )
 */
@@ -65,7 +65,7 @@ print_r($info);
 /* Output:
 SplFileInfo Object
 (
-    [pathName:SplFileInfo:private] => E:\OSPanel\domains\own-php-manual\php-output\2-file-system.php
+    [pathName:SplFileInfo:private] => E:\OSPanel\domains\own-php-manual\output\2-file-system.php
 [fileName:SplFileInfo:private] => 2-file-system.php
 )
 */
