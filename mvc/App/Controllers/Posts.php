@@ -7,6 +7,14 @@ use App\Models\Post;
 
 class Posts extends \Core\Controller
 {
+    protected function before()
+    {
+    }
+
+    protected function after()
+    {
+    }
+
     public function indexAction()
     {
         $posts = Post::getAll();

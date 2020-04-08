@@ -19,5 +19,4 @@ class Post extends \Core\Model
             echo $e->getMessage();
         }
     }
-
 }

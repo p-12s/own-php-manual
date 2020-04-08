@@ -117,27 +117,3 @@ class Router
         return $namespace;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
