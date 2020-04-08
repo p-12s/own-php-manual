@@ -1,16 +1,8 @@
 <?php
 
-//require '../App/Controllers/Posts.php';
-
 require_once dirname(__DIR__) . '/vendor/autoload.php';
-$loader = new \Twig\Loader\ArrayLoader([
-    'index' => 'Hello {{ name }}!',
-]);
-$twig = new \Twig\Environment($loader);
 
-echo $twig->render('index', ['name' => 'Fabien']);
-
-
+// Autoloader
 spl_autoload_register( function ($class) {
     $root = dirname(__DIR__);
     $file = $root . '/' . str_replace('\\', '/', $class) . '.php';
@@ -19,8 +11,12 @@ spl_autoload_register( function ($class) {
     }
 });
 
-//require '../Core/Router.php';
+// Error and Exception handlering
+error_reporting(E_ALL);
+set_error_handler('Core\Error::errorHandler');
+set_exception_handler('Core\Error::exceptionHandler');
 
+// Routing
 $router = new Core\Router();
 
 $router->add('', ['controller' => 'Home', 'action' => 'index']);
