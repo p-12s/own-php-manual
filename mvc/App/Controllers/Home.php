@@ -2,10 +2,26 @@
 
 namespace App\Controllers;
 
-class Home
+use \Core\View;
+
+class Home extends \Core\Controller
 {
-    public function index()
+    protected function before()
     {
-        echo 'Hello from INDEX action HOME controller';
+        echo ' (before) ';
+    }
+
+    protected function after()
+    {
+        echo ' (after) ';
+    }
+
+    public function indexAction()
+    {
+        //echo 'Hello from INDEX action HOME controller';
+        View::renderTemplate('Home/index.html', [
+            'name' => 'Dave',
+            'colors' => ['red', 'green', 'blue']
+        ]);
     }
 }

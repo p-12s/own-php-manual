@@ -2,17 +2,24 @@
 
 namespace App\Controllers;
 
-class Posts
+class Posts extends \Core\Controller
 {
-    public function index()
+    public function indexAction()
     {
         echo 'Hello from POSTS controller INDEX action';
         echo '<p>Query string parameters<pre>'.
             htmlspecialchars(print_r($_GET, true)) .'</pre></pre>';
     }
 
-    public function addNew()
+    public function addNewAction()
     {
-        echo 'Hello from addNew Post';
+        echo 'Hello from POSTS controller addNew ACTION';
+    }
+
+    public function editAction()
+    {
+        echo 'Hello from POSTS controller edit ACTION';
+        echo '<p>Query string parameters<pre>'.
+            htmlspecialchars(print_r($this->route_params, true)) .'</pre></pre>';
     }
 }
